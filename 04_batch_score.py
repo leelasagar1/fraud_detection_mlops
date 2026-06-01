@@ -8,7 +8,6 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install -U mlflow databricks-sdk
 # MAGIC %pip install databricks-feature-engineering lightgbm
 # MAGIC dbutils.library.restartPython()
 # MAGIC # then re-set registry URI and re-run

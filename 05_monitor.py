@@ -95,4 +95,9 @@ display(spark.table(METRICS_TABLE).orderBy("metric", "feature", "batch"))
 
 # COMMAND ----------
 
+try: dbutils.jobs.taskValues.set("retrain_needed", bool(len(fired)))
+except Exception: pass
+
+# COMMAND ----------
+
 
