@@ -14,12 +14,17 @@
 
 # COMMAND ----------
 
+from src.features import build_features
+
+# COMMAND ----------
+
 CATALOG, SCHEMA = "main", "fraud"
 TXN_TABLE   = f"{CATALOG}.{SCHEMA}.transactions"
 MODEL_NAME  = f"{CATALOG}.{SCHEMA}.fraud_clf"
 PRED_TABLE  = f"{CATALOG}.{SCHEMA}.scored_predictions"
  
 import mlflow, os, numpy as np, pandas as pd
+
  
 # Load the underlying LightGBM from the champion (strip the FE wrapper, same as nb 03).
 URI = f"models:/{MODEL_NAME}@champion"

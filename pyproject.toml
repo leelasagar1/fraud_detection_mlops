@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+# Add the repo root to the import path so `from src.features import ...` resolves
+# when pytest runs in CI. Without this, pytest can't find the `src` package.
+pythonpath = ["."]
